@@ -1,0 +1,17 @@
+{
+  "name": "create-aws-pre-signed-url",
+  "version": "1.0.0",
+  "description": "Create presigned urls for s3 contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nitin kumar",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.150.0",
+    "body-parser": "^1.18.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.2"
+  }
+}
