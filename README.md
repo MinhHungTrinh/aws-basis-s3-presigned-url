@@ -13,20 +13,24 @@ Node version >= 6.10.1 should be installed.
 Create a S3 Bucket and configure CORS permission:
 https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html
 ```$xslt
-{
-	"CORSConfiguration": {
-		"CORSRule": {
-			"AllowedOrigin": "*",
-			"AllowedMethod": [
-				"GET",
-				"POST",
-				"PUT"
-			],
-			"MaxAgeSeconds": "3000",
-			"AllowedHeader": "*"
-		}
-	}
-}
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "PUT",
+            "POST",
+            "DELETE",
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": [],
+        "MaxAgeSeconds": 3000
+    }
+]
 ```
 
 Create IAM User or IAM Role (if you use EC2) have policy action (or S3FullAccessPolicy):
